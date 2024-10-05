@@ -1,0 +1,43 @@
+header{
+  padding-block: 2rem;
+
+  & nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & img{
+      width:  3.2rem;
+      height: 3.2rem;
+
+      transition: transform .4s ease-in-out;
+    }
+
+    & img[src*='logo']:hover{
+      transform: rotate(90deg);
+    }
+
+    & img[src*='shop']:hover{
+      transform: rotate(-30deg);
+    }
+
+    & a{
+      position: relative;
+
+      & span{
+        position: absolute;
+        top: -.8rem;
+        right: -.8rem;
+
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+
+        background-color: var(--snitap-sun);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
