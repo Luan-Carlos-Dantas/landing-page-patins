@@ -1,0 +1,73 @@
+:root{
+  font-size: 62.5%;
+  --snitap-sun:#FFCD1E;
+  --snitap-sky-mid:#06B6D4;
+  --snitap-sky-light:#67E8F9;
+  --snitap-joy-mid:#DB2777;
+  --snitap-joy-light:#F472B6;
+  --snitap-leaf-mid:#16A34A;
+  --bg-color:#FAFAFA;
+  --bg-highlights: #000000;
+  --bg-text:#000000;
+
+  --text-ff: 'Montserrat', sans-serif;
+  --title-ff: 'Syne', sans-serif;
+  --title-fs-1: 6.4rem;
+  --title-fs-2: 4rem;
+
+  --text-fs: 1.6rem;
+  --span-fs: 1.4rem;
+}
+
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, button{
+  font: 500 var(--text-fs)/1.5 var(--text-ff);
+}
+
+h1, h2{
+  font-family: var(--title-ff);
+  font-weight: 700;
+}
+
+h1{
+  font-size: var(--title-fs-1);
+  line-height: 1.25;
+}
+
+h2{
+  font-size: var(--title-fs-2);
+  line-height: 1.2;
+}
+
+span{
+  font: 500 var(--span-fs)/1.5 var(--text-ff);
+}
+
+a{
+  text-decoration: none;
+  color: var(--bg-text);
+}
+
+i{
+  font-size: 2.4rem;
+}
+
+img{
+  max-width: 100%;
+  display: inline-block;
+}
+
+
+@media (width <= 23.5em) {
+  :root{
+    --title-fs-1: 3.2rem;
+    --title-fs-2: 2.4rem;
+  }
+}
