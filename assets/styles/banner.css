@@ -1,11 +1,9 @@
 .banner{
   max-width: 100vw;
-  border: 1px solid blue;
   padding-block: 4rem;
   overflow: hidden;
 
   & .scroller{
-    border: 1px solid black;
     width: 100%;
     padding-block: 1rem;
     overflow: hidden;
