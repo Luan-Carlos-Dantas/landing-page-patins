@@ -31,6 +31,10 @@ html, body, button{
   font: 500 var(--text-fs)/1.5 var(--text-ff);
 }
 
+body{
+  background-color: var(--bg-color);
+}
+
 h1, h2{
   font-family: var(--title-ff);
   font-weight: 700;
