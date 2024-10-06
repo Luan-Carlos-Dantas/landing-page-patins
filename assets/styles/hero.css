@@ -1,4 +1,8 @@
 section.hero{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
 
   & h1{
     max-width: 64rem;
@@ -6,7 +10,6 @@ section.hero{
 
   & h1 div{
     display: inline-block;
-    border: 1px solid blue;
     overflow: hidden;
     height: 8rem;
     width: min-content;
@@ -66,6 +69,72 @@ section.hero{
         background: #fff;
       }
     }
+  }
+
+  & > :nth-child(2){
+    display: block;
+    width: 100%;
+    max-width: 48.8rem;
+    height: 48.8rem;
+
+    & .content{
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+  & img{
+    position: absolute;
+    width: 100%;
+  }
+
+  & img[src*='ellipse']{
+    transform: translateX(200%);
+    width: 94%;
+    top: 3px;
+    left: 3px;
+    animation: slideIn 3s .2s ease both;
+  }
+
+  & img[src*='patins']{
+    transform: translateX(150%);
+    z-index: 1;
+    animation: slideIn 3s ease both;
+
+  }
+
+  & img[src*='stars-1']{
+    max-width: 8.8rem;
+    top: 30%;
+    z-index: 0;
+    opacity: 0;
+    transform: translateX(400%);
+    animation: slideIn 2s .8s ease both, show 1s .8s ease both;
+  }
+  & img[src*='stars-2']{
+    max-width: 4rem;
+    right: 0;
+    bottom: 35%;
+    z-index: 0;
+    opacity: 0;
+    transform: translateX(400%);
+    animation: slideIn 2s .8s ease both, show 1s .8s ease both;
+  }
+  }
+}
+
+@keyframes show {
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  50%{
+    transform: translateX(-20px);
+  }
+  100%{
+    transform: translateX(0);
   }
 }
 
@@ -137,6 +206,8 @@ section.hero{
 
 @media (width <= 23.5em) {
   section.hero{
+    flex-direction: column-reverse;
+    justify-content: center;
     & h1 div{
       height: 4rem;
     }
@@ -144,6 +215,38 @@ section.hero{
     & .buttons{
       display: flex;
       flex-direction: column-reverse;
+    }
+
+    & > :nth-child(2){
+      display: block;
+      width: 100%;
+      max-width: 31.2rem;
+      height: 31.2rem;
+
+      & .content{
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+    & img[src*='stars-1']{
+      max-width: 5.6rem;
+      top: 30%;
+      z-index: 0;
+      opacity: 0;
+      transform: translateX(350%);
+      animation: slideIn 2s .8s ease both, show 1s .8s ease both;
+    }
+    & img[src*='stars-2']{
+      max-width: 2.5rem;
+      right: 0;
+      bottom: 35%;
+      z-index: 0;
+      opacity: 0;
+      transform: translateX(400%);
+      animation: slideIn 2s .8s ease both, show 1s .8s ease both;
+    }
+    }
   }
 
   @keyframes slideUp {
