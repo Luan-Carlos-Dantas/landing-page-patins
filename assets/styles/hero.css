@@ -204,7 +204,7 @@ section.hero{
 }
 
 
-@media (width <= 23.5em) {
+@media (width <= 26.5em) {
   section.hero{
     flex-direction: column-reverse;
     justify-content: center;

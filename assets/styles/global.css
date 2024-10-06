@@ -69,7 +69,7 @@ img{
 }
 
 
-@media (width <= 23.5em) {
+@media (width <= 26.5em) {
   :root{
     --title-fs-1: 3.2rem;
     --title-fs-2: 2.4rem;
